@@ -6,14 +6,9 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 SERPAPI_API_KEY = os.getenv('SERPAPI_API_KEY')
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY 
 
-from collections import deque
-from typing import Dict, List, Optional, Any
+from typing import Optional
 from langchain import LLMChain, OpenAI, PromptTemplate, SerpAPIWrapper 
 from langchain.embeddings import OpenAIEmbeddings
-from langchain.llms import BaseLLM
-from langchain.vectorstores.base import VectorStore
-from pydantic import BaseModel, Field
-from langchain.chains.base import Chain
 from langchain.experimental import BabyAGI
 from langchain.vectorstores import FAISS
 from langchain.docstore import InMemoryDocstore
